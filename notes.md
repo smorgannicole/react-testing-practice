@@ -24,3 +24,4 @@
 - as a general rule of thumb: integration => unit => e2e (from most to least often used)
   - integration tests tend to be slower than unit tests because it tests several units together, but it provides better confidence in application sturdiness. also, these tests are less likely to break if code is refactored (as long as the end result stays the same)
 - styles should be avoided testing bc of their fragility and minimal value delivery (doesn't tell us if the app looks good)
+- test organization: tests should either be in one test folder or with their corresponding components (no right or wrong)
