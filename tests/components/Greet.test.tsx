@@ -1,8 +1,8 @@
-import { it, expect, describe } from "vitest";
+// import { it, expect, describe } from "vitest";
 import { render, screen } from "@testing-library/react";
 import Greet from "../../src/components/Greet";
 // have to render the Greet component using the render fxn from react testing lib
-import "@testing-library/jest-dom/vitest";
+// import "@testing-library/jest-dom/vitest";
 // custom matchers that come with jest-dom testing library
 
 describe("Greet", () => {
