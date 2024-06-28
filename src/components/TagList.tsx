@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 const TagList = () => {
   const [tags, setTags] = useState<string[]>([]);
 
+  // effect hook here is used to simulate fetching tags from backend by calling delay fxn and waiting 500ms
   useEffect(() => {
     const fetchTags = async () => {
       await delay(500);
