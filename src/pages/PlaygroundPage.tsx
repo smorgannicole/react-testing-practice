@@ -1,15 +1,9 @@
-import { Toaster } from "react-hot-toast";
-// Toaster component is responsible for displaying the toast notifications
-import ToastDemo from "../components/ToastDemo";
+import OrderStatusSelector from "../components/OrderStatusSelector";
 
 const PlaygroundPage = () => {
-  return (
-    <>
-      <ToastDemo />
-      <Toaster />
-    </>
-  );
-  // in order for ToastDemo to work, also need Toaster component bc it's the container where the toast notifications are shown
+  return <OrderStatusSelector onChange={console.log} />;
+  // when an arrow fxn takes a value and passes it to another fxn, code can be simplified as shown above (as opposed to: value => console.log(value))
+  // we're simply passing a reference to the fxn, not calling it
 };
 
 export default PlaygroundPage;
