@@ -4,9 +4,13 @@ import { Product } from "../entities";
 
 const ProductList = () => {
   const [products, setProducts] = useState<Product[]>([]);
+  // stores data
   const [isLoading, setLoading] = useState(false);
+  // stores loading state
   const [error, setError] = useState("");
+  // stores potential errors
 
+  // fetching data from /products endpoint
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -23,12 +27,14 @@ const ProductList = () => {
     fetchProducts();
   }, []);
 
+  // if items haven't rendered for whatever reason:
   if (isLoading) return <div>Loading...</div>;
 
   if (error) return <div>Error: {error}</div>;
 
   if (products.length === 0) return <p>No products available.</p>;
 
+  // else render items in a list
   return (
     <ul>
       {products.map((product) => (

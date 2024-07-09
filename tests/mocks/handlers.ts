@@ -23,5 +23,13 @@ export const handlers = [
       },
     ]);
   }),
+
+  http.get("/products", () => {
+    return HttpResponse.json([
+      { id: 1, name: "Product 1" },
+      { id: 2, name: "Product 2" },
+      { id: 3, name: "Product 3" },
+    ]);
+  }),
 ];
 // arr of request handlers- each handler defines how to respond to a specific type of request to a specific endpoint
