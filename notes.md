@@ -27,3 +27,11 @@
 - test organization: tests should either be in one test folder or with their corresponding components (no right or wrong)
 - setup files are loaded before each test file and are useful for setting up testing environment
 - user-event is a companion library to react testing lib that simply simulates user interactions
+
+**lesson 3: mocking apis**
+
+- most front-end apps need to talk to a back-end
+  - when unit testing front-end, tester shouldn't run their tests against a live backend for two reasons:
+  1. sending requests over the network is slow and will make unit tests slow
+  2. if back-end isn't up and running, the tests will fail despite the front-end potentially running correctly
+  - so, when testing front-end, back-end should be mocked (through the use of libraries like mockServiceWorker which is a unified place where all endpoints and their responses can be defined)

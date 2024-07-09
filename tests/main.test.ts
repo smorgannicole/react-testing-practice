@@ -2,7 +2,10 @@ import { it, expect, describe } from "vitest";
 
 // create test suite to make sure setup was successful
 describe("group", () => {
-  it("should", () => {
-    expect(1).toBeTruthy();
+  it("should", async () => {
+    const response = await fetch("/categories");
+    const data = await response.json();
+    console.log(data);
+    expect(data).toHaveLength(3);
   });
 });
