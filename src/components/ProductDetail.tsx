@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import { Product } from "../entities";
 
 const ProductDetail = ({ productId }: { productId: number }) => {
-  const [product, setProduct] = useState<Product | undefined>(
-    undefined
-  );
+  const [product, setProduct] = useState<Product | undefined>(undefined);
   const [isLoading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
   useEffect(() => {
+    // since productId is a number, this is really saying if productId=0...
+    // this conditional is to prevent an extra fetch request to the backend by returning prematurely
     if (!productId) {
       setError("Invalid ProductId");
       return;
